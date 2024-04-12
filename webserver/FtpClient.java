@@ -3,7 +3,7 @@
  * RICHARD ROBERTS
  */
 
-package bulletin;
+package webserver;
 
 import java.io.*;
 import java.net.*;
