@@ -1,7 +1,5 @@
 # Networking-Project-2
 
-**Note:** This README looks a lot better on Github
-
 # CONTRIBUTORS:
 
 - **Clay Chilenski**
@@ -90,4 +88,4 @@
     - We realised it was difficult to process inputs while also using a prompt message before each users inputs. We did not fix all these issues
 
 2. **Message Groups Changing**
-    - We ran into many issues with messages, stored in tuples as (message, groups) where te groups would change for previously send messages when the sender would join a new group. This issue caused many different test cases to narrow down and eventually using breakpoints to discover what function and line were altering the previous messages. This issue was solved. 
+    - We ran into many issues with messages, stored in tuples as (message, groups) where the groups would change for previously sent messages when the sender would join a new group. This issue took many different test cases to narrow down and eventually using breakpoints to discover what function and line were altering the previous messages. This issue was solved. 

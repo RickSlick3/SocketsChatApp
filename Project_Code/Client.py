@@ -62,9 +62,9 @@ def receive_messages(client_socket, prompt):
 """
 HELPER FUNCTIONS
 """
-
+# starts the client and allows the to enter a server address and port number if they choose
 def choose_server_and_port():
-    print("Default server address: 'localhost' \nDefault port: 12345 \nPress ENTER to accept defaults\n")
+    print("\nDefault server address: 'localhost' \nDefault port: 12345 \nPress ENTER to accept defaults\n")
     host = input("Enter server address: ")
     port = input("Enter port number: ")
     
@@ -125,7 +125,7 @@ def choose_username(client_socket):
         else: 
             break
     
-    return username
+    return username.upper().strip()
 
 # for mode 2: show availible groups and take user input, reprompt if necessary
 def pick_group_id(client_socket):
@@ -140,25 +140,26 @@ def pick_group_id(client_socket):
             group_id = input("INVALID GROUP ID, please enter valid group [1, 2, 3, 4, 5]: ")
     client_socket.send(group_id.encode())
 
+# prints all command options
 def print_options():
     print("\nUse these commands as they appear (CASE SENSITIVE)")
     print("\nCOMMANDS: ")
-    print("@connect: delete your current connection and allow you to reconnect to a new server and port")
-    print("@users: list all users and their groups if the user shares at least 1 group with you")
-    print("@message #: retrieves a message from the server with the matching ID (#)")
-    print("@join: joins the public group and removes you from all private groups")
-    print("@quit: remove your connection from the server")
+    print("\n@connect: delete your current connection and allow you to reconnect to a new server and port")
+    print("\n@users: list all users and their groups if the user shares at least 1 group with you")
+    print("\n@message #: retrieves a message from the server with the matching ID (#)")
+    print("\n@join: joins the public group and removes you from all private groups")
+    print("\n@quit: remove your connection from the server")
     
-    print("@groups: retrieves a list of all groups that can be joined")
-    print("@groupjoin #: allows you to join a new private group, replace '#' with the group you want to join")
+    print("\n@groups: retrieves a list of all groups that can be joined")
+    print("\n@groupjoin #: allows you to join a new private group, replace '#' with the group you want to join")
     print("              This will remove you from the public group but you can belong to multiple private groups")
     print("              Must join 1 group per command")
-    print("@groupleave #: allows you to leave a group, replace '#' with the group you want to join")
+    print("\n@groupleave #: allows you to leave a group, replace '#' with the group you want to join")
     print("               you must always belong to at least 1 group")
-    print("@grouppost # MSG: post a message to a message specific group (#) with a message (MSG)")
-    print("@groupusers #: retrieve a list of users in the given group (#)")
+    print("\n@grouppost # MSG: post a message to a message specific group (#) with a message (MSG)")
+    print("\n@groupusers #: retrieve a list of users in the given group (#)")
     print("               You must belong to a group to see the users")
-    print("@help: reprint these command options")
+    print("\n@help: reprint these command options")
     print()
 
 
