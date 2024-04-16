@@ -1,4 +1,6 @@
-# CS4065-CN-PROJ2
+# Networking-Project-2
+
+**Note:** This README looks a lot better on Github
 
 # CONTRIBUTORS:
 
@@ -59,6 +61,9 @@
     i. you will be able to see the 2 most recent messages sent to that group ID. 
     ii. Any time you join a new group you will see the 2 most recent messages
 
+## 4. Send Messages:
+
+    - You can now send messages to all users that share a group with you. **Any non-command message you send will automatically be broadcast to all groups you are in**. Have fun!
 
 # COMMANDS:
 
@@ -81,4 +86,8 @@
 
 # ISSUES:
 
-1. NONE???
+1. **Visual Bugs**
+    - We realised it was difficult to process inputs while also using a prompt message before each users inputs. We did not fix all these issues
+
+2. **Message Groups Changing**
+    - We ran into many issues with messages, stored in tuples as (message, groups) where te groups would change for previously send messages when the sender would join a new group. This issue caused many different test cases to narrow down and eventually using breakpoints to discover what function and line were altering the previous messages. This issue was solved. 
