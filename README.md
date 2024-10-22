@@ -14,7 +14,7 @@ Unmaintained Repo: https://github.com/walkluong/Networking-Project-2
 1. Users must have python installed on their computer, or have a developer environment with a python compiler.
     - **get python here**: https://www.python.org/
 
-2. Users must have the** client.py** file downloaded into a known location on their computer.
+2. Users must have the **client.py** file downloaded into a known location on their computer.
 
 3. Someone must have the **server.py** file downloaded into a known location on their computer.
 
