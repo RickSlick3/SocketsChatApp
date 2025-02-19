@@ -1,5 +1,3 @@
-# Networking-Project-2
-
 Unmaintained Repo: https://github.com/walkluong/Networking-Project-2
 
 # CONTRIBUTORS:
